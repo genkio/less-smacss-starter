@@ -1,0 +1,35 @@
+{
+  "name": "less-smacss-starter",
+  "version": "1.0.0",
+  "description": "Inspired by SMACSS from Jonathan Snook, a SMACSS starter kit with gulp, less, and some built-in base classes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j1wu/less-smacss-starter.git"
+  },
+  "keywords": [
+    "less",
+    "smacss",
+    "css",
+    "gulp",
+    "starter-kit"
+  ],
+  "author": "j1wu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j1wu/less-smacss-starter/issues"
+  },
+  "homepage": "https://github.com/j1wu/less-smacss-starter#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sourcemaps": "^2.4.1"
+  }
+}
