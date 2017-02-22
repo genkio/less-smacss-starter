@@ -43,3 +43,4 @@ Inspired by [SMACSS](https://smacss.com/) from Jonathan Snook, a SMACSS starter 
   - `modal`
   - `modal__header`
   - `modal--dark`
+- [example](https://github.com/j1wu/less-smacss-starter/blob/master/src/less/modules/_modal.less)
