@@ -4,19 +4,25 @@
  */
 
 /* Base */
-@import "_normalize.less";
-@import "_variables.less";
-@import "_base.less";
-@import "_layouts.less";
-@import "_themes.less";
-@import "_states.less";
-@import "_mixins.less";
-@import "_helpers.less";
-
-@import "_overrides.less";
+@import "_normalize";
+@import "_variables";
+@import "_base";
+@import "_themes";
+@import "_states";
+@import "_mixins";
+@import "_helpers";
 
 /* Vendor */
 
+/* Generic layouts */
+@import "_layouts";
+
+/* Specific layouts */
+@import "layouts/_l-modal";
 
 /* Modules */
-@import "modules/_modal.less";
+@import "modules/_modal";
+
+
+/* Overrides, use with caution! */
+@import "_overrides";

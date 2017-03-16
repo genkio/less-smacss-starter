@@ -2,7 +2,7 @@
 
 # Less SMACSS Starter
 
-Inspired by [SMACSS](https://smacss.com/) from Jonathan Snook, a SMACSS starter kit with gulp, less, and some built-in base classes, for quickly starting off small to medium sized projects.
+Inspired by [SMACSS](https://smacss.com/) from Jonathan Snook, a SMACSS starter kit with using gulp and less, for quickly starting off small to medium sized projects.
 
 ## Getting Started
 
@@ -22,12 +22,11 @@ Inspired by [SMACSS](https://smacss.com/) from Jonathan Snook, a SMACSS starter 
 - layout should be the major content areas, like header, content, footer
 - layout should be used to contain modules
 - layout should determine the dimensions and positioning of its modules
-- naming conventions, using prefix `l-`
-  - `l-header`, `l-content`, `l-footer`
+- naming conventions, using prefix `l-`, for example `l-header`
 
 ### Module
 
-- (root) module
+- module
   - module should be consisted with sub-components
   - module should be used to contain contents
   - module should be reusable
@@ -35,12 +34,60 @@ Inspired by [SMACSS](https://smacss.com/) from Jonathan Snook, a SMACSS starter 
   - module should be expanded to fill the layout
   - module should have its own source file
   - module should not have width and margin
+  - naming conventions, single word or words seperated by `-`, for example `modal`
 - sub-component
   - sub-component should be the child elements that make up the module
-- sub-module
-  - sub-module should be considered as variations to module
-- naming conventions
-  - `modal`
-  - `modal__header`
-  - `modal--dark`
-- [example](https://github.com/j1wu/less-smacss-starter/blob/master/src/less/modules/_modal.less)
+  - naming conventions, `module-name__sub-component-name`
+- variations
+  - could either be variations to a module or variations to a sub-component
+  - naming conventions, `module-or-component-name--variation-characteristic`
+
+## Example
+
+html structure
+```html
+<div class="l-modal"> <!--layout-->
+  <div class="modal--dark"> <!--module variations-->
+    <div class="modal__header--bright"> <!--sub-component variations-->
+      Hello world!
+    </div>
+  </div>
+</div>
+```
+[source](index.html)
+
+layout style
+```less
+.l-modal {
+  .l-align-center;
+  width: 400px;
+  margin: 0 auto;
+}
+```
+[source](src/less/layouts/_l-modal.less)
+
+module style
+```less
+/* base module */
+.modal {
+  padding: 10px;
+
+  /* module variations */
+  &--dark {
+    &:extend(.modal);
+    background-color: @black-color;
+  }
+}
+
+/* sub-component */
+.modal__header {
+  color: @white-color;
+
+  /* sub-component variations */
+  &--bright {
+    &:extend(.modal__header);
+    background-color: @red-color;
+  }
+}
+```
+[source](src/less/modules/_modal.less)

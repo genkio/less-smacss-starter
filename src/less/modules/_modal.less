@@ -1,18 +1,25 @@
 /**
- * The tile module.
+ * The modal module.
  */
 
 /* base module */
 .modal {
-  padding: 5px;
+  padding: 10px;
 
-  /* sub-component */
-  &__header {
-    font-weight: bold;
+  /* module variations */
+  &--dark {
+    &:extend(.modal);
+    background-color: @black-color;
   }
 }
 
-/* sub-module */
-.modal--dark {
-  background-color: #000;
+/* sub-component */
+.modal__header {
+  color: @white-color;
+
+  /* sub-component variations */
+  &--bright {
+    &:extend(.modal__header);
+    background-color: @red-color;
+  }
 }
