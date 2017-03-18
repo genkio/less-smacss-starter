@@ -22,6 +22,7 @@ Inspired by [SMACSS](https://smacss.com/) from Jonathan Snook, a SMACSS starter 
 - layout should be the major content areas, like header, content, footer
 - layout should be used to contain modules
 - layout should determine the dimensions and positioning of its modules
+- layout should have its own source file, file name shoule be same as its module name
 - naming conventions, using prefix `l-`, for example `l-header`
 
 ### Module
@@ -56,17 +57,17 @@ html structure
 ```
 [source](index.html)
 
-layout style
+layout style `(layouts/_modal.less)`
 ```less
 .l-modal {
-  .l-align-center;
+  .text-center;
   width: 400px;
   margin: 0 auto;
 }
 ```
-[source](src/less/layouts/_l-modal.less)
+[source](src/less/layouts/_modal.less)
 
-module style
+module style `(modules/_modal.less)`
 ```less
 /* base module */
 .modal {

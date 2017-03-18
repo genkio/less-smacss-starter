@@ -1,3 +1,14 @@
 /**
  * Mixins styles
  */
+.clearfix() {
+  // source: http://nicolasgallagher.com/micro-clearfix-hack/
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
