@@ -2,14 +2,19 @@
 
 # Less SMACSS Starter
 
-Inspired by [SMACSS](https://smacss.com/) from Jonathan Snook, a SMACSS starter kit with using gulp and less, for quickly starting off small to medium sized projects.
+Inspired by [SMACSS](https://smacss.com/) from Jonathan Snook, a battery included SMACSS starter kit with using gulp and less, for quickly starting off small to medium sized projects.
 
 ## Getting Started
 
     npm install
     gulp
 
-## General Rules
+## Included Batteries
+
+- minimal css [reset](src/less/_reset.less) and [base](src/less/_base.less) classes
+- commonly used [helper](src/less/_helpers.less) classes and [mixins](src/less/_mixins.less)
+
+## SMACSS. The Rules
 
 - be consistent
 - `class` over `id`
@@ -43,7 +48,7 @@ Inspired by [SMACSS](https://smacss.com/) from Jonathan Snook, a SMACSS starter 
   - could either be variations to a module or variations to a sub-component
   - naming conventions, `module-or-component-name--variation-characteristic`
 
-## Example
+## SMACSS. The Example
 
 html structure
 ```html
