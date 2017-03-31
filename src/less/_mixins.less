@@ -1,6 +1,22 @@
 /**
  * Mixins styles
  */
+.make-cols(@size, @cols: @grid, @col: 1) when (@col <= @cols) {
+  .col-@{size}-@{col} {
+    width: (@col * 100% / @cols);
+  }
+
+  .make-cols(@size, @cols, (@col + 1));
+}
+
+.make-offset-cols(@size, @cols, @col: 1) when (@col <= @base-cols) {
+  .col-@{size}-offset-@{col} {
+    margin-left: (@col * 100% / @cols);
+  }
+
+  .make-offset-cols(@size, @cols, (@col + 1));
+}
+
 .clearfix() {
   // source: http://nicolasgallagher.com/micro-clearfix-hack/
   &:before,

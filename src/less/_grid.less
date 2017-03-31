@@ -1,0 +1,38 @@
+/**
+ * Grid system
+ */
+ .container {
+  .clearfix;
+  margin: 0 auto;
+  padding-left:  @gutter;
+  padding-right: @gutter;
+}
+
+.row {
+  .clearfix;
+  width: 100%;
+  margin-left: -@gutter;
+  margin-right: -@gutter;
+}
+
+[class*="col-"] {
+  .pull-left;
+  padding-left: @gutter;
+  padding-right: @gutter;
+};
+
+@media (min-width: @screen-xs-min) {
+  .make-cols(xs);
+}
+
+@media (min-width: @screen-sm-min) {
+  .make-cols(sm);
+}
+
+@media (min-width: @screen-md-min) {
+  .make-cols(md);
+}
+
+@media (min-width: @screen-lg-min) {
+  .make-cols(lg);
+}
